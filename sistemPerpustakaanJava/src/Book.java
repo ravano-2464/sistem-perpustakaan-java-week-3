@@ -60,7 +60,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return title + " oleh " + author + " - " + (isAvailable ? "Tersedia" : "Dipinjam");
+        return title + " | " + author + " | " + (isAvailable ? "Tersedia" : "Dipinjam");
     }
 
     public void setTitle(String title) {

@@ -7,6 +7,16 @@ import java.util.Iterator;
 public class Library {
     private ArrayList<Book> books = new ArrayList<>();
 
+    public Library() {
+        initializeBooks(); // Memasukkan data buku awal saat sistem dimulai
+    }
+
+    private void initializeBooks() {
+        addBook(new Book("Laskar Pelangi", "Andrea Hirata"));
+        addBook(new Book("Bumi Manusia", "Pramoedya Ananta Toer"));
+        addBook(new Book("Dilan 1990", "Pidi Baiq"));
+    }
+
     /**
      * Menambahkan buku ke perpustakaan.
      *
@@ -91,7 +101,6 @@ public class Library {
             if (book.getTitle().equalsIgnoreCase(title)) {
                 if (book.isAvailable()) {
                     book.meminjam();
-                    System.out.println("Buku '" + title + "' berhasil dipinjam.");
                     return book;
                 } else {
                     System.out.println("Buku '" + title + "' sedang dipinjam.");
