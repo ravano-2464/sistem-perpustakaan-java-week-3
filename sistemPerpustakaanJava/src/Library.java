@@ -7,6 +7,10 @@ import java.util.Iterator;
 public class Library {
     private ArrayList<Book> books = new ArrayList<>();
 
+    /**
+     * Menginisialisasi beberapa buku.
+     *
+     */
     public Library() {
         initializeBooks(); // Memasukkan data buku awal saat sistem dimulai
     }
